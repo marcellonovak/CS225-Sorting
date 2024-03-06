@@ -41,5 +41,5 @@ obj/
 *.bak
 *.cache
 
-# Exclude VS Code directory
-.vscode/*
+# Exclude Visual Studio Code project settings
+.vscode/
