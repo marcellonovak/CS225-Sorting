@@ -10,3 +10,36 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Exclude Visual Studio 2022 cache/options directory
+.vs/
+
+# Exclude build output directories
+Debug/
+Release/
+x64/
+x86/
+bin/
+obj/
+
+# Exclude other generated files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Exclude local history directory
+.history/
+
+# Exclude built extensions
+*.vsix
+
+# Exclude temporary files
+*.tmp
+*.tlog
+*.log
+*.bak
+*.cache
+
+# Exclude VS Code directory
+.vscode/*
