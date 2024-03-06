@@ -1,6 +1,8 @@
 // Selection Sort Function Header
 // Takes in an array and sorts it using the selection sort algorithm
 
+#pragma once 
+
 // Standard io libraries + warning muffler
 #define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
