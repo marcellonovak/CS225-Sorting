@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="SortSelection.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ARRAY.h" />
+    <ClInclude Include="SortBubble.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
