@@ -23,5 +23,8 @@
     <ClInclude Include="ARRAY.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortBubble.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
