@@ -1,3 +1,6 @@
+// Array Object Header
+// Used to create arrays and named arrays
+
 #pragma once
 #include <iostream>
 #include <string>

@@ -130,7 +130,7 @@
     <ClCompile Include="SortSelection.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ARRAY.h" />
+    <ClInclude Include="Array.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
