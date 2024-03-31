@@ -131,6 +131,7 @@
     <ClCompile Include="SortSelection.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SortSelection.h" />
     <ClInclude Include="VECTOR.h" />
     <ClInclude Include="SortBubble.cpp" />
   </ItemGroup>

@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include "VECTOR.h"
+
+#include "SortSelection.h"
+
 using namespace std;
 
 //VECTOR OBJECT
