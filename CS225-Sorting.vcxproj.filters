@@ -32,5 +32,8 @@
     <ClInclude Include="SortSelection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortBubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

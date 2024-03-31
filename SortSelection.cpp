@@ -1,14 +1,13 @@
-// Selection Sort Function Header
+// Selection Sort Function
 // Takes in an array and sorts it using the selection sort algorithm
 
 #pragma once 
 
-// Standard io libraries + warning muffler
 #define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
 #include <numeric>
 #include <vector>
-#include <algorithm> // include for swap
+
 #include "VECTOR.h"
 #include "SortSelection.h"
 
