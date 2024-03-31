@@ -12,6 +12,7 @@ class VectorObj {
 protected:
 	vector<int> sort;
 	int swaps;
+	int len;
 public:
 	VectorObj(int len); //randomize 
 	~VectorObj();
