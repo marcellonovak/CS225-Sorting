@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortSelection.h">
+    <ClCompile Include="SortSelection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -23,11 +23,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VECTOR.h">
+    <ClInclude Include="SortBubble.cpp">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="SortBubble.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="VECTOR.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -128,11 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SortSelection.h" />
+    <ClCompile Include="SortSelection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VECTOR.h" />
-    <ClInclude Include="SortBubble.h" />
+    <ClInclude Include="SortBubble.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
