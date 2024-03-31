@@ -23,7 +23,7 @@ public:
 
 	int swapIndex(int i, int j) {
 		if (i != j) { // Check to prevent unnecessary swaps
-			std::swap(vect[i], vect[j]);
+			swap(vect[i], vect[j]);
 			swaps++; // Keeping track of the swaps
 		};
 	};
