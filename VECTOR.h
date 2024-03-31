@@ -21,10 +21,7 @@ class NamedVectorObj : public VectorObj {
 private:
 	string name;
 public:
-	NamedVectorObj(string name, int len): VectorObj(len), name(name){}
-	~NamedVectorObj() { cout << "Peace out i'm sorted"; }
-
-	void setName(string name);
-
-	friend ostream& operator<<(ostream& os, VectorObj& arr);
+	NamedVectorObj(string name, int len);
+	~NamedVectorObj();
+	friend ostream& operator<<(ostream& os, NamedVectorObj& v);
 };
