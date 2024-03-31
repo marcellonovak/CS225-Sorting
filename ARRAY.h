@@ -4,26 +4,25 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <vector>
 using namespace std;
 
 class Array {
 protected:
-	int array[5]; //feel free to change the size
-	int steps;
-	//we need to figure out how we are measuring seconds
+	vector<int> sort;
+	int swaps;
 public:
-	Array(int len);
+	Array(int len); //randomize 
 	~Array();
-	int setArray();
-	int setSteps();
-	friend ostream& operator<<(ostream& os, Array& arr);
 };
 
 class NamedArray : public Array {
 private:
 	string name;
 public:
-	NamedArray();
-	~NamedArray();
-	string setName();
+	NamedArray(string name, int len): Array(len), name(name){}
+	~NamedArray() { cout << "Peace out i'm sorted"; }
+	friend ostream& operator<<(ostream& os, Array& arr);
+	void setName(string name);
 };
