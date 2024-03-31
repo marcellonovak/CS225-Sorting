@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm> // include for swap
 #include "VECTOR.h"
+#include "SortSelection.h"
 
 using namespace std;
 

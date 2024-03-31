@@ -29,5 +29,8 @@
     <ClInclude Include="VECTOR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
