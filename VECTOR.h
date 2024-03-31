@@ -17,9 +17,17 @@ public:
 	VectorObj(int len); //randomize 
 	~VectorObj();
 	int getSize() {return len;}
+
 	int getIndex(int i) {return vect[i];}
+	int setIndex(int i, int val) {vect[i] = val;}
+
+	int swapIndex(int i, int j) {
+		if (i != j) { // Check to prevent unnecessary swaps
+			std::swap(vect[i], vect[j]);
+			swaps++; // Keeping track of the swaps
+		};
+	};
 	int getSwaps() {return swaps;}
-	void setSwaps(int s) {swaps = s;}
 };
 
 class NamedVectorObj : public VectorObj {
