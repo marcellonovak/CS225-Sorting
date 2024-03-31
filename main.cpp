@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "VECTOR.h"
-
 #include "SortSelection.h"
 
 using namespace std;
@@ -17,6 +16,7 @@ VectorObj::VectorObj(int len): len(len) {
 VectorObj::~VectorObj() {
 	cout << "peace out bbygurl" << endl;
 }
+
 
 //NAMED VECTOR OBJECT
 NamedVectorObj::NamedVectorObj(string name, int len) : VectorObj(len), name(name) {}
@@ -37,6 +37,8 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 int main() {
 	srand(time(0));
 	NamedVectorObj short1("selection short", 5);
+	cout << short1;
+	selectionSort(short1);
 	cout << short1;
 	return 0;
 }
