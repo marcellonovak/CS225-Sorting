@@ -12,7 +12,7 @@ VectorObj::VectorObj(int len): len(len) {
 }
 
 VectorObj::~VectorObj() {
-	cout << "peace out bby" << endl;
+	cout << "peace out bbygurl" << endl;
 }
 
 //NAMED VECTOR OBJECT
@@ -32,7 +32,8 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 }
 
 int main() {
-	NamedVectorObj short1("selection sort", 5);
+	srand(time(0));
+	NamedVectorObj short1("selection short", 5);
 	cout << short1;
 	return 0;
 }
