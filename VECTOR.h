@@ -16,7 +16,9 @@ protected:
 public:
 	VectorObj(int len); //randomize 
 	~VectorObj();
-	int getLen() {return len;}
+	int getSize() {return len;}
+	int getIndex(int i) {return vect[i];}
+	void setSwaps(int s) {swaps = s;}
 };
 
 class NamedVectorObj : public VectorObj {
