@@ -32,7 +32,8 @@ void selectionSort(NamedVectorObj& vect) {
         }
 
         // Swap the found minimum element with the first element of the unsorted part
-        swap(minIndex, i);
-        vect.setSwaps(vect.getSwaps() + 1);
+        if (i != minIndex) { // Only swap if needed
+            vect.swapIndex(i, minIndex);
+        }
     }
 }
