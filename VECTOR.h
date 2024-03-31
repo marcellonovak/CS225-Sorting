@@ -16,6 +16,7 @@ protected:
 public:
 	VectorObj(int len); //randomize 
 	~VectorObj();
+	int getLen() {return len;}
 };
 
 class NamedVectorObj : public VectorObj {
