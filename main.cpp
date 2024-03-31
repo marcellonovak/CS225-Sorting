@@ -7,7 +7,7 @@ using namespace std;
 VectorObj::VectorObj(int len): len(len) {
 	swaps = 0;
 	for (int i = 0; i < len; i++) {
-		sort.push_back(i) = rand() % 101;
+		sort.push_back(rand() % 101);
 	}
 }
 
@@ -24,8 +24,8 @@ NamedVectorObj::~NamedVectorObj() {
 
 ostream& operator<<(ostream& os, NamedVectorObj& v) {
 	os << "Name of sort: " << v.name << endl << "Swaps needed: " << v.swaps << endl << "Sorted vector: ";
-	for (int i = 0; i < v.len; i++) {
-		os << v.sort[i];
+	for (int i = 0; i < v.sort.size(); i++) {
+		os << v.sort[i] << ", ";  // M: Added space for readability
 	}
 	os << endl;
 	return os;
