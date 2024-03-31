@@ -10,7 +10,7 @@ using namespace std;
 
 class VectorObj {
 protected:
-	vector<int> sort;
+	vector<int> vect;
 	int swaps;
 	int len;
 public:

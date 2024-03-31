@@ -7,12 +7,15 @@
 #define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
 #include <numeric>
+#include <vector>
 #include <algorithm> // include for swap
+#include "VECTOR.h"
 
 using namespace std;
 
-void selectionSort(int arr[], int n) {
+void selectionSort(NamedVectorObj& v) {
     int i, j, minIndex;
+    int n = v.getLen();
 
     // For each element in the array except the last one
     for (i = 0; i < n - 1; i++) {
@@ -22,12 +25,12 @@ void selectionSort(int arr[], int n) {
 
         // Find the index of the minimum element in the remaining unsorted part
         for (j = i + 1; j < n; j++) {
-            if (arr[j] < arr[minIndex]) {
+            if (v.vect[j] < v.vect[minIndex]) {
                 minIndex = j;
             }
         }
 
         // Swap the found minimum element with the first element of the unsorted part
-        swap(arr[minIndex], arr[i]);
+        swap(v.vect[minIndex], vect[i]);
     }
 }
