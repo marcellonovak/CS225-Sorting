@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 #include "VECTOR.h"
 using namespace std;
 
@@ -8,7 +7,7 @@ using namespace std;
 VectorObj::VectorObj(int len): len(len) {
 	swaps = 0;
 	for (int i = 0; i < len; i++) {
-		sort[i] = rand() % 101;
+		sort.push_back(i) = rand() % 101;
 	}
 }
 
@@ -33,5 +32,7 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 }
 
 int main() {
+	NamedVectorObj short1("selection sort", 5);
+	cout << short1;
 	return 0;
 }
