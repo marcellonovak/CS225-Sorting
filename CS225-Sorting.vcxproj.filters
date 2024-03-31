@@ -18,9 +18,12 @@
     <ClCompile Include="SortSelection.h">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ARRAY.h">
+    <ClInclude Include="VECTOR.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="SortBubble.h">

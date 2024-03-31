@@ -131,7 +131,7 @@
     <ClCompile Include="SortSelection.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ARRAY.h" />
+    <ClInclude Include="VECTOR.h" />
     <ClInclude Include="SortBubble.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
