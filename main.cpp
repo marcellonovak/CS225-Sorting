@@ -34,6 +34,7 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 int main() {
 	srand(time(0));
 	NamedVectorObj short1("selection short", 5);
+	SortSelection(short1);
 	cout << short1;
 	return 0;
 }
