@@ -22,9 +22,8 @@ NamedVectorObj::~NamedVectorObj() {
 	cout << "peace out i'm sorted" << endl;
 }
 
-ostream& operator<<(ostream& os, const NamedVectorObj& v) {
+ostream& operator<<(ostream& os, NamedVectorObj& v) {
 	os << "Name of sort: " << v.name << endl << "Swaps needed: " << v.swaps << endl;
-
 	return os;
 }
 
