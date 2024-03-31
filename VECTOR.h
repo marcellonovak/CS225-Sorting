@@ -18,6 +18,7 @@ public:
 	~VectorObj();
 	int getSize() {return len;}
 	int getIndex(int i) {return vect[i];}
+	int getSwaps() {return swaps;}
 	void setSwaps(int s) {swaps = s;}
 };
 

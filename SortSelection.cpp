@@ -13,9 +13,9 @@
 
 using namespace std;
 
-void selectionSort(NamedVectorObj& v) {
+void selectionSort(NamedVectorObj& vect) {
     int i, j, minIndex;
-    int n = v.getLen();
+    int n = vect.getSize();
 
     // For each element in the array except the last one
     for (i = 0; i < n - 1; i++) {
@@ -25,12 +25,13 @@ void selectionSort(NamedVectorObj& v) {
 
         // Find the index of the minimum element in the remaining unsorted part
         for (j = i + 1; j < n; j++) {
-            if (v.vect[j] < v.vect[minIndex]) {
+            if (vect.getIndex(j) < vect.getIndex(minIndex)) {
                 minIndex = j;
             }
         }
 
         // Swap the found minimum element with the first element of the unsorted part
-        swap(v.vect[minIndex], vect[i]);
+        swap(minIndex, i);
+        vect.setSwaps(vect.getSwaps() + 1);
     }
 }
