@@ -1,11 +1,9 @@
 #define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
-#include <numeric>
 #include <vector>
 
 #include "VECTOR.h"
 #include "SortBogo.h"
-#include <random>
 
 using namespace std;
 
