@@ -19,7 +19,7 @@ VectorObj::VectorObj(int len): len(len) {
 }
 
 VectorObj::~VectorObj() {
-	cout << "peace out bbygurl" << endl;
+	//cout << "peace out bbygurl" << endl;
 }
 
 
@@ -61,6 +61,8 @@ int main() {
 	//SERIOUS SORTS
 	//selection sort
 	SetConsoleTextAttribute(mConsole, 1);
+	cout << "SELECTION SORT*************************" << endl;
+	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short1("selection short", 5);
 	short1.printData(short1);
 	selectionSort(short1);
@@ -78,6 +80,8 @@ int main() {
 
 	//bubble sort
 	SetConsoleTextAttribute(mConsole, 2); 
+	cout << "BUBBLE SORT*************************" << endl;
+	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short2("bubble short", 5);
 	short2.printData(short2);
 	bubbleSort(short2);
@@ -95,6 +99,8 @@ int main() {
 
 	//insertion sort
 	SetConsoleTextAttribute(mConsole, 6); 
+	cout << "INSERTION SORT*************************" << endl;
+	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short3("insertion short", 5);
 	short3.printData(short3 );
 	insertionSort(short3);
@@ -113,7 +119,9 @@ int main() {
 	//SILLY SORTS :))
 	//CAN ONLY RUN ON AN VECTOR WITH 6 OR LESS ELEMENTS
 	SetConsoleTextAttribute(mConsole, 12);
-	NamedVectorObj short4("bogo short", 5);
+	cout << "SILLY SORTS!!!!!*************************" << endl;
+	SetConsoleTextAttribute(mConsole, 15);
+	NamedVectorObj short4("bogo sort", 6);
 	short4.printData(short4);
 	bogoSort(short4);
 	cout << short4 << endl;
