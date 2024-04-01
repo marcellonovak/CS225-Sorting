@@ -5,6 +5,7 @@
 #include "SortSelection.h"
 #include "SortBubble.h"
 #include "SortInsertion.h"
+#include "SortBogo.h"
 
 using namespace std;
 
@@ -55,5 +56,11 @@ int main() {
 	insertionSort(short3);
 	cout << short3 << endl;
 
+	NamedVectorObj short4("bogo short", 5);
+	cout << short4;
+	bogoSort(short4);
+	cout << short4 << endl;
+
+	
 	return 0;
 }
