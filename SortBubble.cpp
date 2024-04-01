@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "VECTOR.h"
+#include "SortBubble.h"
 
 using namespace std;
 

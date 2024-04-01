@@ -21,11 +21,11 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SortBubble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SortBubble.cpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="VECTOR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
