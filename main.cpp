@@ -44,6 +44,8 @@ int main() {
 	selectionSort(short1);
 	cout << short1;
 
+	cout << endl;
+
 	NamedVectorObj short2("bubble short", 5);
 	cout << short2;
 	bubbleSort(short2);

@@ -35,5 +35,14 @@
     <ClInclude Include="SortBubble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortInsertion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SortBogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SortStalin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
