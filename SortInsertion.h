@@ -1,4 +1,4 @@
 #pragma once
 #include "VECTOR.h"
 
-void instertionSort(NamedVectorObj& vect);
+void insertionSort(NamedVectorObj& vect);

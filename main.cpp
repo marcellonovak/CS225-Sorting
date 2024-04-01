@@ -4,6 +4,7 @@
 #include "VECTOR.h"
 #include "SortSelection.h"
 #include "SortBubble.h"
+#include "SortInsertion.h"
 
 using namespace std;
 
@@ -42,14 +43,17 @@ int main() {
 	NamedVectorObj short1("selection short", 5);
 	cout << short1;
 	selectionSort(short1);
-	cout << short1;
-
-	cout << endl;
+	cout << short1 << endl;
 
 	NamedVectorObj short2("bubble short", 5);
 	cout << short2;
 	bubbleSort(short2);
-	cout << short2;
+	cout << short2 << endl;
+
+	NamedVectorObj short3("insertion short", 5);
+	cout << short3;
+	insertionSort(short3);
+	cout << short3 << endl;
 
 	return 0;
 }
