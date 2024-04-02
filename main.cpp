@@ -9,6 +9,11 @@
 #include "SortBogo.h"
 
 using namespace std;
+/*TO_DO
+* -excpetions
+* -file i/o
+* -move all vector.h code to vector.cpp
+*/
 
 //VECTOR OBJECT
 VectorObj::VectorObj(int len): len(len) {
