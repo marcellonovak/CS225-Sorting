@@ -24,7 +24,7 @@ VectorObj::VectorObj(int len): len(len) {
 }
 
 VectorObj::~VectorObj() {
-	//cout << "peace out bbygurl" << endl;
+
 }
 
 
@@ -32,7 +32,7 @@ VectorObj::~VectorObj() {
 NamedVectorObj::NamedVectorObj(string name, int len) : VectorObj(len), name(name) {}
 
 NamedVectorObj::~NamedVectorObj() {
-	cout << "peace out i'm sorted" << endl;
+	cout << "peace out i'm sorted :)" << endl;
 }
 
 ostream& operator<<(ostream& os, NamedVectorObj& v) {
