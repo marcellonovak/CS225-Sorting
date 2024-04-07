@@ -36,5 +36,6 @@ private:
 public:
 	NamedVectorObj(string name, int len);
 	~NamedVectorObj();
+	void printData(NamedVectorObj& vect);
 	friend ostream& operator<<(ostream& os, NamedVectorObj& v);
 };
