@@ -13,9 +13,18 @@
 
 using namespace std;
 
-void bubbleSort(NamedVectorObj& vect) {
+void bubbleSort(NamedVectorObj& vect, ofstream& logfile) {
 	int n = vect.getSize();
 	bool swapped = false;
+
+    // Save the original buffer of std::cout
+    auto coutBuf = cout.rdbuf();
+    // Redirect cout to logfile
+    cout.rdbuf(logfile.rdbuf());
+
+    // Log initial array state
+    cout << "Initial array: ";
+    vect.printData(vect);
 
     do {
         swapped = false; // Reset flag to false on each new pass
@@ -25,6 +34,14 @@ void bubbleSort(NamedVectorObj& vect) {
                 vect.swapIndex(i, i + 1);
                 swapped = true; // Set flag to true if a swap is made
             }
+
+            // Log the state of the vector after each swap
+            cout << "After swap " << (i + 1) << ": ";
+            vect.printData(vect);
         }
+
     } while (swapped); // Continue until no more swaps are needed
+
+    // Restore the original cout buffer so it points to the console again
+    cout.rdbuf(coutBuf);
 }

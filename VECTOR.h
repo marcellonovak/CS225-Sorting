@@ -36,6 +36,16 @@ private:
 public:
 	NamedVectorObj(string name, int len);
 	~NamedVectorObj();
-	void printData(NamedVectorObj& vect);
+
+	void printData(NamedVectorObj& vect) {
+		for (int i = 0; i < vect.getSize(); i++) {
+			cout << vect.vect[i];
+			if (i < vect.getSize() - 1) {
+				cout << ", ";
+			}
+		}
+		cout << endl;
+	}
+
 	friend ostream& operator<<(ostream& os, NamedVectorObj& v);
 };

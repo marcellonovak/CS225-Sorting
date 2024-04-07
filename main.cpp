@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <windows.h>
 
@@ -11,7 +12,6 @@
 using namespace std;
 /*TO_DO
 * -excpetions
-* -file i/o
 * -move all vector.h code to vector.cpp
 */
 
@@ -22,11 +22,7 @@ VectorObj::VectorObj(int len): len(len) {
 		vect.push_back(rand() % 101);  // Creating a random vector of integers
 	}
 }
-
-VectorObj::~VectorObj() {
-
-}
-
+VectorObj::~VectorObj() {}
 
 //NAMED VECTOR OBJECT
 NamedVectorObj::NamedVectorObj(string name, int len) : VectorObj(len), name(name) {}
@@ -47,21 +43,19 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 	return os;
 }
 
-void NamedVectorObj::printData(NamedVectorObj& vect) {
-	cout << "unsorted vector: ";
-	for (int i = 0; i < vect.getSize(); i++) {
-		cout << vect.vect[i];
-		if (i < vect.getSize() - 1) {
-			cout << ", "; 
-		}
-	}
-	cout << endl;
-	
+void printDataMain(NamedVectorObj& vect) {
+	cout << "Unsorted vector: ";
+	vect.printData(vect);
 }
 
 int main() {
 	srand(time(0));
 	HANDLE mConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	// File to write to
+	ofstream logfile;
+	logfile.open("log.txt");
+	logfile << "Current time: " << __TIME__ << endl;
 
 	//SERIOUS SORTS
 	//selection sort
@@ -69,18 +63,18 @@ int main() {
 	cout << "SELECTION SORT*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short1("selection short", 5);
-	short1.printData(short1);
-	selectionSort(short1);
+	printDataMain(short1);
+	selectionSort(short1, logfile);
 	cout << short1 << endl;
 
 	NamedVectorObj medium1("selection medium", 10); 
-	medium1.printData(medium1); 
-	selectionSort(medium1); 
+	printDataMain(medium1);
+	selectionSort(medium1, logfile);
 	cout << medium1 << endl; 
 
 	NamedVectorObj long1("selection long", 25);
-	long1.printData(long1);
-	selectionSort(long1);
+	printDataMain(long1);
+	selectionSort(long1, logfile);
 	cout << long1 << endl;
 
 	//bubble sort
@@ -88,18 +82,18 @@ int main() {
 	cout << "BUBBLE SORT*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short2("bubble short", 5);
-	short2.printData(short2);
-	bubbleSort(short2);
+	printDataMain(short2);
+	bubbleSort(short2, logfile);
 	cout << short2 << endl;
 
 	NamedVectorObj medium2("bubble medium", 10);
-	medium2.printData(medium2);
-	bubbleSort(medium2);
+	printDataMain(medium2);
+	bubbleSort(medium2, logfile);
 	cout << medium2 << endl;
 
 	NamedVectorObj long2("bubble long", 25);
-	long2.printData(long2);
-	bubbleSort(long2);
+	printDataMain(long2);
+	bubbleSort(long2, logfile);
 	cout << long2 << endl;
 
 	//insertion sort
@@ -107,18 +101,18 @@ int main() {
 	cout << "INSERTION SORT*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short3("insertion short", 5);
-	short3.printData(short3 );
-	insertionSort(short3);
+	printDataMain(short3);
+	insertionSort(short3, logfile);
 	cout << short3 << endl;
 
 	NamedVectorObj medium3("insertion medium", 10);
-	medium3.printData(medium3);
-	insertionSort(medium3);
+	printDataMain(medium3);
+	insertionSort(medium3, logfile);
 	cout << medium3 << endl;
 
 	NamedVectorObj long3("insertion long", 25);
-	long3.printData(long3);
-	insertionSort(long3);
+	printDataMain(long3);
+	insertionSort(long3, logfile);
 	cout << long3 << endl;
 
 	//SILLY SORTS :))
@@ -127,10 +121,12 @@ int main() {
 	cout << "SILLY SORTS!!!!!*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short4("bogo sort", 6);
-	short4.printData(short4);
-	bogoSort(short4);
+	printDataMain(short4);
+	bogoSort(short4, logfile);
 	cout << short4 << endl;
 
+
+	logfile.close();
 	SetConsoleTextAttribute(mConsole, 15);
 	return 0;
 }

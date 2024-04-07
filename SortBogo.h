@@ -3,4 +3,4 @@
 
 bool isSorted(NamedVectorObj& vect);
 void shuffle(NamedVectorObj& vect);
-void bogoSort(NamedVectorObj& vect);
+void bogoSort(NamedVectorObj& vect, ofstream& logfile);

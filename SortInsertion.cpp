@@ -13,9 +13,18 @@
 
 using namespace std;
 
-void insertionSort(NamedVectorObj& vect) {
+void insertionSort(NamedVectorObj& vect, ofstream& logfile) {
 	int i, j, key;
 	int n = vect.getSize();
+
+	// Save the original buffer of std::cout
+	auto coutBuf = cout.rdbuf();
+	// Redirect std::cout to logfile
+	cout.rdbuf(logfile.rdbuf());
+
+	// Log initial array state
+	cout << "Initial array: ";
+	vect.printData(vect);
 
 	// For each element in the array except the first one
 	for (i = 1; i < n; i++) {
@@ -28,5 +37,12 @@ void insertionSort(NamedVectorObj& vect) {
 			j = j - 1;
 		}
 		vect.setIndex(j + 1, key);
+
+		// Log the state of the vector after each swap
+		cout << "After swap " << (i + 1) << ": ";
+		vect.printData(vect);
 	}
+
+	// Restore the original cout buffer so it points to the console again
+	cout.rdbuf(coutBuf);
 }

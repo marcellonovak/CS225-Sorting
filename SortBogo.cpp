@@ -27,12 +27,39 @@ void shuffle(NamedVectorObj& vect) {
     }
 }
 
-void bogoSort(NamedVectorObj& vect) {
+// Save original cout buffer, global for easy access
+streambuf* coutBufBogo = cout.rdbuf();
+int i = 0;  // counter for number of swaps
+
+void bogoSort(NamedVectorObj& vect, ofstream& logfile) {
+
+    // Use a static variable to check if cout has been redirected
+    static bool coutRedirected = false;
+
+    // Check if we haven't redirected cout yet
+    if (!coutRedirected) {
+        cout.rdbuf(logfile.rdbuf());
+        coutRedirected = true;
+
+        // Log initial array state
+        cout << "Initial array: ";
+        vect.printData(vect);
+    }
+
     if (isSorted(vect)) {
+        cout.rdbuf(coutBufBogo); // Restore the original cout buffer
+        coutRedirected = false; // Reset the flag
         return;
     }
 
-    shuffle(vect);
+    else {
+        shuffle(vect);
+        // Log the state of the vector after each swap
+        cout << "After swap " << i << ": ";
+        vect.printData(vect);
+        i++;
+    }
+
     //new skill: recursion
-    bogoSort(vect);
+    bogoSort(vect, logfile);
 }
