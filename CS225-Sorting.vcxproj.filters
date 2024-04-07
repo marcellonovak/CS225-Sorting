@@ -24,6 +24,12 @@
     <ClCompile Include="SortBubble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SortBogo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SortInsertion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VECTOR.h">
@@ -39,9 +45,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SortBogo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SortStalin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

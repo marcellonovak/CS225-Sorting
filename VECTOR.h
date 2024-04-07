@@ -21,13 +21,13 @@ public:
 	int getIndex(int i) {return vect[i];}
 	void setIndex(int i, int val) {vect[i] = val;}
 
+	int getSwaps() { return swaps; }
 	void swapIndex(int i, int j) {
 		if (i != j) { // Check to prevent unnecessary swaps
 			swap(vect[i], vect[j]);
 			swaps++; // Keeping track of the swaps
 		};
 	};
-	int getSwaps() {return swaps;}
 };
 
 class NamedVectorObj : public VectorObj {
