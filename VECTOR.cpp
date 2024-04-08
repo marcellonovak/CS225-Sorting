@@ -5,6 +5,7 @@
 #include <fstream>
 #include <numeric>
 #include <vector>
+#include <algorithm>
 
 #include "VECTOR.h"
 
@@ -30,7 +31,7 @@ void VectorObj::swapIndex(int i, int j) {
 NamedVectorObj::NamedVectorObj(string name, int len) : VectorObj(len), name(name) {}
 
 NamedVectorObj::~NamedVectorObj() {
-	cout << "peace out i'm sorted :)" << endl;
+	cout << "peace out i'm outta here :)" << endl;
 }
 
 void NamedVectorObj::printData(NamedVectorObj& vect) {
@@ -41,6 +42,12 @@ void NamedVectorObj::printData(NamedVectorObj& vect) {
 		}
 	}
 	cout << endl;
+}
+
+bool NamedVectorObj::isSorted(NamedVectorObj& vect) {
+	bool ans;
+	ans = is_sorted(vect.vect.begin(), vect.vect.end());
+	return ans;
 }
 
 ostream& operator<<(ostream& os, NamedVectorObj& v) {

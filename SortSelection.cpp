@@ -18,6 +18,7 @@ void selectionSort(NamedVectorObj& vect, ofstream& logfile) {
     int i, j, minIndex;
     int n = vect.getSize();
 
+
     // Save the original buffer of std::cout
     auto coutBuf = cout.rdbuf();
     // Redirect cout to logfile
