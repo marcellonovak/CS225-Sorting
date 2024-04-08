@@ -44,7 +44,7 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 }
 
 void printDataMain(NamedVectorObj& vect) {
-	cout << "Unsorted vector: ";
+	cout << "Original vector: ";
 	vect.printData(vect);
 }
 
@@ -124,6 +124,63 @@ int main() {
 	printDataMain(short4);
 	bogoSort(short4, logfile);
 	cout << short4 << endl;
+
+	//USER INPUT SECTION
+	int name = 0;
+	int len;
+	while (name != 5){
+		SetConsoleTextAttribute(mConsole, 5);
+		cout << "CHOOSE YOUR OWN ADVENTURE!!!!!**************" << endl;
+		SetConsoleTextAttribute(mConsole, 15);
+		cout << "WHICH SORT WOULD YOU LIKE TO DO????" << endl;
+		cout << "1. Selection Sort" << endl << "2. Bubble Sort" << endl << "3. Insertion Sort" << endl << "4. Bogo Sort" << endl << "5. Quit" << endl;
+		cin >> name;
+		while (!cin || name < 1 || name > 5) {
+			cin.clear(); //clear error flag
+			cin.ignore(INT_MAX, '\n');
+			cout << "please enter a number between 1 and 5: "; //reprompt user
+			cin >> name;
+		}
+		cout << "enter the length of array between 5 and 100: ";
+		cin >> len;
+		while (!cin || len < 5 || len > 100) {
+			cin.clear(); //clear error flag
+			cin.ignore(INT_MAX, '\n');
+			cout << "please enter a number between 5 and 100: "; //reprompt user
+			cin >> len;
+		}
+
+		if (name == 1) {
+			NamedVectorObj user("selection sort", len);
+			printDataMain(user);
+			selectionSort(user, logfile);
+			cout << user << endl;
+		}
+		else if (name == 2) {
+			NamedVectorObj user("bubble sort", len);
+			printDataMain(user);
+			bubbleSort(user, logfile);
+			cout << user << endl;
+		}
+		else if (name == 3) {
+			NamedVectorObj user("insertion sort", len);
+			printDataMain(user);
+			insertionSort(user, logfile);
+			cout << user << endl;
+		}
+		else if (name == 4) {
+			NamedVectorObj user("bogo sort", len);
+			printDataMain(user);
+			try {
+				bogoSort(user, logfile);
+
+			}
+			catch (int m) {
+				cout << "bogo sort cannot have a length longer than " << m << endl;
+			}
+			cout << user << endl;
+		}
+	}
 
 
 	logfile.close();

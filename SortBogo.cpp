@@ -32,6 +32,11 @@ streambuf* coutBufBogo = cout.rdbuf();
 int i = 0;  // counter for number of swaps
 
 void bogoSort(NamedVectorObj& vect, ofstream& logfile) {
+    
+    int max = 6;
+    if (vect.getSize() > max) {
+        throw max;
+    }
 
     // Use a static variable to check if cout has been redirected
     static bool coutRedirected = false;
