@@ -50,11 +50,11 @@ bool NamedVectorObj::isSorted(NamedVectorObj& vect) {
 	return ans;
 }
 
-ostream& operator<<(ostream& os, NamedVectorObj& v) {
-	os << "Name of sort: " << v.name << endl << "Swaps needed: " << v.swaps << endl << "Sorted vector: ";
-	for (int i = 0; i < v.vect.size(); i++) {
-		os << v.vect[i];
-		if (i < v.vect.size() - 1) {
+ostream& operator<<(ostream& os, NamedVectorObj& vect) {
+	os << "Name of sort: " << vect.name << endl << "Swaps needed: " << vect.swaps << endl << "Sorted vector: ";
+	for (int i = 0; i < vect.vect.size(); i++) {
+		os << vect.vect[i];
+		if (i < vect.vect.size() - 1) {
 			cout << ", ";
 		}
 	}
