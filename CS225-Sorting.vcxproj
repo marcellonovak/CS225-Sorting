@@ -131,6 +131,7 @@
     <ClCompile Include="SortBogo.cpp" />
     <ClCompile Include="SortInsertion.cpp" />
     <ClCompile Include="SortSelection.cpp" />
+    <ClCompile Include="VECTOR.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortBogo.h" />

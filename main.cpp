@@ -16,7 +16,7 @@ using namespace std;
 */
 
 //VECTOR OBJECT
-VectorObj::VectorObj(int len): len(len) {
+/*VectorObj::VectorObj(int len) : len(len) {
 	swaps = 0;
 	for (int i = 0; i < len; i++) {
 		vect.push_back(rand() % 101);  // Creating a random vector of integers
@@ -41,7 +41,7 @@ ostream& operator<<(ostream& os, NamedVectorObj& v) {
 	}
 	os << endl;
 	return os;
-}
+}*/
 
 void printDataMain(NamedVectorObj& vect) {
 	cout << "Original vector: ";

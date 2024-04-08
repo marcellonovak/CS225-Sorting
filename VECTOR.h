@@ -22,12 +22,7 @@ public:
 	void setIndex(int i, int val) {vect[i] = val;}
 
 	int getSwaps() { return swaps; }
-	void swapIndex(int i, int j) {
-		if (i != j) { // Check to prevent unnecessary swaps
-			swap(vect[i], vect[j]);
-			swaps++; // Keeping track of the swaps
-		};
-	};
+	void swapIndex(int i, int j);
 };
 
 class NamedVectorObj : public VectorObj {
@@ -37,15 +32,7 @@ public:
 	NamedVectorObj(string name, int len);
 	~NamedVectorObj();
 
-	void printData(NamedVectorObj& vect) {
-		for (int i = 0; i < vect.getSize(); i++) {
-			cout << vect.vect[i];
-			if (i < vect.getSize() - 1) {
-				cout << ", ";
-			}
-		}
-		cout << endl;
-	}
+	void printData(NamedVectorObj& vect);
 
 	friend ostream& operator<<(ostream& os, NamedVectorObj& v);
 };

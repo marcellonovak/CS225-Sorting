@@ -30,6 +30,9 @@
     <ClCompile Include="SortInsertion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VECTOR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VECTOR.h">
