@@ -10,9 +10,6 @@
 #include "SortBogo.h"
 
 using namespace std;
-/*TO_DO
-* -excpetions
-*/
 
 void printDataMain(NamedVectorObj& vect) {
 	cout << "Original vector: ";
