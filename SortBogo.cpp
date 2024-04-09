@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// Check if the array is sorted
 bool isSorted(NamedVectorObj& vect) {
     int n = vect.getSize();
     for (int i = 1; i < n; i++) {
@@ -17,9 +18,9 @@ bool isSorted(NamedVectorObj& vect) {
     return true;
 }
 
+// Shuffling the array
 void shuffle(NamedVectorObj& vect) {
     int n = vect.getSize();
- 
 
     for (int i = 0; i < n; i++) {
         int randomIndex = rand() % 4;
@@ -39,6 +40,7 @@ void bogoSort(NamedVectorObj& vect, ofstream& logfile) {
     }
 
     // Use a static variable to check if cout has been redirected
+    // (Have to use a flag because of recursion)
     static bool coutRedirected = false;
 
     // Check if we haven't redirected cout yet

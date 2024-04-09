@@ -10,38 +10,6 @@
 #include "SortBogo.h"
 
 using namespace std;
-/*TO_DO
-* -excpetions
-* -move all vector.h code to vector.cpp
-*/
-
-//VECTOR OBJECT
-/*VectorObj::VectorObj(int len) : len(len) {
-	swaps = 0;
-	for (int i = 0; i < len; i++) {
-		vect.push_back(rand() % 101);  // Creating a random vector of integers
-	}
-}
-VectorObj::~VectorObj() {}
-
-//NAMED VECTOR OBJECT
-NamedVectorObj::NamedVectorObj(string name, int len) : VectorObj(len), name(name) {}
-
-NamedVectorObj::~NamedVectorObj() {
-	cout << "peace out i'm sorted :)" << endl;
-}
-
-ostream& operator<<(ostream& os, NamedVectorObj& v) {
-	os << "Name of sort: " << v.name << endl << "Swaps needed: " << v.swaps << endl << "Sorted vector: ";
-	for (int i = 0; i < v.vect.size(); i++) {
-		os << v.vect[i];
-		if (i < v.vect.size() - 1) {
-			cout << ", ";
-		}
-	}
-	os << endl;
-	return os;
-}*/
 
 void printDataMain(NamedVectorObj& vect) {
 	cout << "Original vector: ";

@@ -17,9 +17,9 @@ void insertionSort(NamedVectorObj& vect, ofstream& logfile) {
 	int i, j, key;
 	int n = vect.getSize();
 
-	// Save the original buffer of std::cout
+	// Save the original buffer of cout
 	auto coutBuf = cout.rdbuf();
-	// Redirect std::cout to logfile
+	// Redirect cout to logfile
 	cout.rdbuf(logfile.rdbuf());
 
 	// Log initial array state

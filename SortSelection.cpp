@@ -18,7 +18,7 @@ void selectionSort(NamedVectorObj& vect, ofstream& logfile) {
     int i, j, minIndex;
     int n = vect.getSize();
 
-    // Save the original buffer of std::cout
+    // Save the original buffer of cout
     auto coutBuf = cout.rdbuf();
     // Redirect cout to logfile
     cout.rdbuf(logfile.rdbuf());
@@ -41,7 +41,7 @@ void selectionSort(NamedVectorObj& vect, ofstream& logfile) {
         }
 
         // Swap the found minimum element with the first element of the unsorted part
-        if (i != minIndex) { // Only swap if needed
+        if (i != minIndex) { // Only swap if    
             vect.swapIndex(i, minIndex);
         }
 

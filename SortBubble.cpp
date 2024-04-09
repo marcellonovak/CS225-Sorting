@@ -20,8 +20,7 @@ void bubbleSort(NamedVectorObj& vect, ofstream& logfile) {
 	bool swapped = false;
     int range = vect.getSize();
     
-
-    // Save the original buffer of std::cout
+    // Save the original buffer of cout
     auto coutBuf = cout.rdbuf();
     // Redirect cout to logfile
     cout.rdbuf(logfile.rdbuf());
@@ -44,7 +43,7 @@ void bubbleSort(NamedVectorObj& vect, ofstream& logfile) {
             vect.printData(vect);
         }
 
-    } while (swapped); // Continue until no more swaps are needed
+    } while (swapped); // Continue until flag isnt flipped
 
     // Restore the original cout buffer so it points to the console again
     cout.rdbuf(coutBuf);
