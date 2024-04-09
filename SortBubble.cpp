@@ -17,7 +17,7 @@ void bubbleSort(NamedVectorObj& vect, ofstream& logfile) {
 	int n = vect.getSize();
 	bool swapped = false;
 
-    // Save the original buffer of std::cout
+    // Save the original buffer of cout
     auto coutBuf = cout.rdbuf();
     // Redirect cout to logfile
     cout.rdbuf(logfile.rdbuf());
