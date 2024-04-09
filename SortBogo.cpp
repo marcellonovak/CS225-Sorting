@@ -33,6 +33,7 @@ streambuf* coutBufBogo = cout.rdbuf();
 int i = 0;  // counter for number of swaps
 
 void bogoSort(NamedVectorObj& vect, ofstream& logfile) {
+
     
     int max = 6;
     if (vect.getSize() > max) {

@@ -27,6 +27,7 @@ int main() {
 
 	//SERIOUS SORTS
 	//selection sort
+	
 	SetConsoleTextAttribute(mConsole, 1);
 	cout << "SELECTION SORT*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
@@ -35,10 +36,10 @@ int main() {
 	selectionSort(short1, logfile);
 	cout << short1 << endl;
 
-	NamedVectorObj medium1("selection medium", 10); 
+	NamedVectorObj medium1("selection medium", 10);
 	printDataMain(medium1);
 	selectionSort(medium1, logfile);
-	cout << medium1 << endl; 
+	cout << medium1 << endl;
 
 	NamedVectorObj long1("selection long", 25);
 	printDataMain(long1);
@@ -46,7 +47,7 @@ int main() {
 	cout << long1 << endl;
 
 	//bubble sort
-	SetConsoleTextAttribute(mConsole, 2); 
+	SetConsoleTextAttribute(mConsole, 2);
 	cout << "BUBBLE SORT*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short2("bubble short", 5);
@@ -65,7 +66,7 @@ int main() {
 	cout << long2 << endl;
 
 	//insertion sort
-	SetConsoleTextAttribute(mConsole, 6); 
+	SetConsoleTextAttribute(mConsole, 6);
 	cout << "INSERTION SORT*************************" << endl;
 	SetConsoleTextAttribute(mConsole, 15);
 	NamedVectorObj short3("insertion short", 5);
@@ -96,10 +97,18 @@ int main() {
 	//USER INPUT SECTION
 	int name = 0;
 	int len;
-	while (name != 5){
+	while (name != 5) {
 		SetConsoleTextAttribute(mConsole, 5);
-		cout << "CHOOSE YOUR OWN ADVENTURE!!!!!**************" << endl;
+		cout << endl << "CHOOSE YOUR OWN ADVENTURE!!!!!**************" << endl;
 		SetConsoleTextAttribute(mConsole, 15);
+		cout << "enter the length of a vector between 5 and 100: ";
+		cin >> len;
+		while (!cin || len < 5 || len > 100) {
+			cin.clear(); //clear error flag
+			cin.ignore(INT_MAX, '\n');
+			cout << "please enter a number between 5 and 100: "; //reprompt user
+			cin >> len;
+		}
 		cout << "WHICH SORT WOULD YOU LIKE TO DO????" << endl;
 		cout << "1. Selection Sort" << endl << "2. Bubble Sort" << endl << "3. Insertion Sort" << endl << "4. Bogo Sort" << endl << "5. Quit" << endl;
 		cin >> name;
@@ -108,14 +117,6 @@ int main() {
 			cin.ignore(INT_MAX, '\n');
 			cout << "please enter a number between 1 and 5: "; //reprompt user
 			cin >> name;
-		}
-		cout << "enter the length of array between 5 and 100: ";
-		cin >> len;
-		while (!cin || len < 5 || len > 100) {
-			cin.clear(); //clear error flag
-			cin.ignore(INT_MAX, '\n');
-			cout << "please enter a number between 5 and 100: "; //reprompt user
-			cin >> len;
 		}
 
 		if (name == 1) {
@@ -144,14 +145,19 @@ int main() {
 
 			}
 			catch (int m) {
-				cout << "bogo sort cannot have a length longer than " << m << endl;
+				cout << "BOGO SORT CANNOT HAVE A LENGTH ABOVE " << m << endl;
 			}
-			cout << user << endl;
+			if (user.getSize() > 6) {
+
+			}
+			else {
+				cout << user << endl;
+			}
 		}
 	}
 
+		logfile.close();
+		SetConsoleTextAttribute(mConsole, 15);
+		return 0;
 
-	logfile.close();
-	SetConsoleTextAttribute(mConsole, 15);
-	return 0;
 }

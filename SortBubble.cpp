@@ -7,7 +7,6 @@
 #include <iostream>
 #include <numeric>
 #include <vector>
-#include <algorithm>
 
 #include "VECTOR.h"
 #include "SortBubble.h"
@@ -15,12 +14,10 @@
 using namespace std;
 
 void bubbleSort(NamedVectorObj& vect, ofstream& logfile) {
-    string msg = "vector already sorted!";
 	int n = vect.getSize();
 	bool swapped = false;
-    int range = vect.getSize();
-    
-    // Save the original buffer of cout
+
+    // Save the original buffer of std::cout
     auto coutBuf = cout.rdbuf();
     // Redirect cout to logfile
     cout.rdbuf(logfile.rdbuf());
@@ -43,7 +40,7 @@ void bubbleSort(NamedVectorObj& vect, ofstream& logfile) {
             vect.printData(vect);
         }
 
-    } while (swapped); // Continue until flag isnt flipped
+    } while (swapped); // Continue until no more swaps are needed
 
     // Restore the original cout buffer so it points to the console again
     cout.rdbuf(coutBuf);
