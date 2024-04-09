@@ -1,4 +1,4 @@
-// Bubble Sort Function Header
+// Bubble Sort Function
 // Takes in an array and sorts it using a bubble sort algorithm
 
 #pragma once

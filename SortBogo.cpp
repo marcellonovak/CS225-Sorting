@@ -1,4 +1,7 @@
-    #define _CRT_SECURE_NO_DEPRECATE
+// Bogo Sort Function Header
+// Takes in an array and sorts it using a bogo sort algorithm
+
+#define _CRT_SECURE_NO_DEPRECATE
 #include <iostream>
 #include <vector>
 
@@ -33,19 +36,19 @@ streambuf* coutBufBogo = cout.rdbuf();
 int i = 0;  // counter for number of swaps
 
 void bogoSort(NamedVectorObj& vect, ofstream& logfile) {
-
     
+    // Throw an exception if the array is too large (crashes)
     int max = 6;
     if (vect.getSize() > max) {
         throw max;
     }
 
-    // Use a static variable to check if cout has been redirected
-    // (Have to use a flag because of recursion)
+    // Use a flag variable to check if cout has been redirected because of recursion
     static bool coutRedirected = false;
 
     // Check if we haven't redirected cout yet
     if (!coutRedirected) {
+        // Redirect cout to logfile
         cout.rdbuf(logfile.rdbuf());
         coutRedirected = true;
 
@@ -54,6 +57,7 @@ void bogoSort(NamedVectorObj& vect, ofstream& logfile) {
         vect.printData(vect);
     }
 
+    // Check if the array is sorted
     if (isSorted(vect)) {
         cout.rdbuf(coutBufBogo); // Restore the original cout buffer
         coutRedirected = false; // Reset the flag
